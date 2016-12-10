@@ -1,41 +1,77 @@
 (function(w, d) {
-	var loader, web, graphics, photography, caption, currentSlide;
+	var loader, landing, web, graphics, photography, caption, currentSlide;
+	var landingContent, webContent, graphicsContent, photographyContent, captionContent;
+	var contentArray = [];
 	var init = function() {
 		loader = d.getElementById('loader');
+		landing = d.getElementById('landing');
     	web = d.getElementById('web');
     	graphics = d.getElementById('graphics');
     	photography = d.getElementById('photography');
     	caption = d.getElementById('caption');
     	currentSlide = 1;
+    	landingContent = d.getElementById('landing-content');
+    	webContent = d.getElementById('web-content');
+    	graphicsContent = d.getElementById('graphics-content');
+    	photographyContent = d.getElementById('photography-content');
+    	captionContent = d.getElementById('caption-content');
+    	contentArray[1] = landingContent;
+    	contentArray[2] = webContent;
+    	contentArray[3] = graphicsContent;
+    	contentArray[4] = photographyContent;
+    	contentArray[5] = captionContent;
+	};
+	var closeContents = function(slideNo) {
+		for (var i = 1; i <= 5; i++) {
+			contentArray[i].className = 'content-close';
+		}
+		contentArray[slideNo].className = 'content-open';
 	};
 	var adjustSlides = function(slideNo) {
-		switch(slideNo) {
+		switch (slideNo) {
 			case 1: {
-				web.className = 'open1';
-				graphics.className = 'close2';
-				photography.className = 'close1';
-				caption.className = 'close2';
+				landing.className = 'open1';
+				web.className = 'close2';
+				graphics.className = 'close1';
+				photography.className = 'close2';
+				caption.className = 'close1';
+				closeContents(slideNo);
 				break;
 			}
 			case 2: {
-				web.className = 'close1';
-				graphics.className = 'open2';
-				photography.className = 'close1';
-				caption.className = 'close2';
+				landing.className = 'close1';
+				web.className = 'open2';
+				graphics.className = 'close1';
+				photography.className = 'close2';
+				caption.className = 'close1';
+				closeContents(slideNo);
 				break;
 			}
 			case 3: {
-				web.className = 'close1';
-				graphics.className = 'close2';
-				photography.className = 'open1';
-				caption.className = 'close2';
+				landing.className = 'close1';
+				web.className = 'close2';
+				graphics.className = 'open1';
+				photography.className = 'close2';
+				caption.className = 'close1';
+				closeContents(slideNo);
 				break;
 			}
 			case 4: {
-				web.className = 'close1';
-				graphics.className = 'close2';
-				photography.className = 'close1';
-				caption.className = 'open2';
+				landing.className = 'close1';
+				web.className = 'close2';
+				graphics.className = 'close1';
+				photography.className = 'open2';
+				caption.className = 'close1';
+				closeContents(slideNo);
+				break;
+			}
+			case 5: {
+				landing.className = 'close1';
+				web.className = 'close2';
+				graphics.className = 'close1';
+				photography.className = 'close2';
+				caption.className = 'open1';
+				closeContents(slideNo);
 				break;
 			}
 		}
@@ -57,7 +93,7 @@
 				e.preventDefault();
 			} else if (keyCode == 40) {
 				//down arrow key
-				if (currentSlide < 4) {
+				if (currentSlide < 5) {
 					currentSlide++;
 					adjustSlides(currentSlide);
 				}
