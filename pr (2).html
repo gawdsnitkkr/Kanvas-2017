@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
+<head>
+ 
+<meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Kanvas | Techspardha 2017</title>
@@ -29,9 +30,9 @@
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     	<link rel="shortcut icon" href="images/thumbnail.png" />
     	<link rel="stylesheet" href="css/main.css" />
-    </head>
-    <body>
-        <div id="slides">
+</head>
+<body>
+<div id="slides">
             <div id="loader"></div>
             <div id="landing"></div>
             <div id="web"></div>
@@ -59,27 +60,14 @@
                     <span>1</span>
                     <span>7</span>
                 </div>
-
-             </div>
-            <div id="web-content">
-               <p style="font-family: Lucida Bright; font-size: 60px; text-align: center"> WEB<br>
-                <p style="text-align: center;font-size: 25px;font-weight: bold">
-                <b>Description</b><br></p>
-               <p> Do you remember the typical scenery we used to draw in every 'drawing period'? Mountains, Sun rising between the mountain valleys, a river and a hut were all that were needed with a splash of color green. However, gone are those days of the typical scenery. Children have become smart these days, and a typical scenery now would consist either of a playground, a beach, a desert to name a few. We take this task a few steps ahead. Using your creative juices, and your knowledge of HTML, CSS and JavaScript tools, we present you the challenge of creating a digital scenery. You can have a look at our (incomplete) scenery demo here.</p>
-
-                <p style="text-align: center; font-size: 25px"><b>Rules</b></p>
-                 <ul class="a">
-                <li><p>Remember that this demo consists only of a few elements, your scenery is required to be complete in itself, and could be anything else as well ( a playground perhaps, as an idea). You may also include animated elements in your scenery, as in the demo.</p></li>
-                <li><p>We love original ideas, and dislike any sort of plagiarism. Plagiarism shows the absence of creativity. All your entries shall be duly checked for plagiarism.</p></li>
-                <li><p>Remember, clock is up till <b>20 feb. 2016</b></p></li>
-                <li><p>Submit your zip-folder containing all the relevant files on below link.<br><br></p></li>
-                </ul>
-                <p style="text-align: center; font-weight: bold">Coordinators<br>
-
-                Varun Kumar : +91-7206479844, Abhishek Goswami : +91-9991016038</p>
-             </div>
-
-            <div id="photography-content">
+	<div class="box">
+	<img src = "webd2.png" height =190 width =200>
+    <!--<h2>Box Title</h2>
+    <p>The Quick Brown Fox Jumped Over The Lazy Dog</p>-->
+    <p><a class="divLink" href="#web-content"></a></p>
+</div>
+<div id= "content">
+<div id="photography-content">
             <p style="font-family: Lucida Bright; font-size: 60px; text-align: center">PHOTOGRAPHY</p>
 
             <p style="text-align: center;font-size: 25px;font-weight: bold">
@@ -135,53 +123,33 @@
                 <p style="text-align: center; font-weight: bold">Coordinator<br>
 
                 Utkarsh Aggarwal: +91-9896003794</p>
-            </div>
-        </div>
-        
-       <!-- <script type ="text/javascript">
-            function myFunction() {
-            var x = document.getElementById("web-content").innerHTML;
-            document.getElementById("img1").innerHTML=x;
-        }
+ <div id="web-content">
+               <p style="font-family: Lucida Bright; font-size: 60px; text-align: center"> WEB<br>
+                <p style="text-align: center;font-size: 25px;font-weight: bold">
+                <b>Description</b><br></p>
+               <p> Do you remember the typical scenery we used to draw in every 'drawing period'? Mountains, Sun rising between the mountain valleys, a river and a hut were all that were needed with a splash of color green. However, gone are those days of the typical scenery. Children have become smart these days, and a typical scenery now would consist either of a playground, a beach, a desert to name a few. We take this task a few steps ahead. Using your creative juices, and your knowledge of HTML, CSS and JavaScript tools, we present you the challenge of creating a digital scenery. You can have a look at our (incomplete) scenery demo here.</p>
+
+                <p style="text-align: center; font-size: 25px"><b>Rules</b></p>
+                 <ul class="a">
+                <li><p>Remember that this demo consists only of a few elements, your scenery is required to be complete in itself, and could be anything else as well ( a playground perhaps, as an idea). You may also include animated elements in your scenery, as in the demo.</p></li>
+                <li><p>We love original ideas, and dislike any sort of plagiarism. Plagiarism shows the absence of creativity. All your entries shall be duly checked for plagiarism.</p></li>
+                <li><p>Remember, clock is up till <b>20 feb. 2016</b></p></li>
+                <li><p>Submit your zip-folder containing all the relevant files on below link.<br><br></p></li>
+                </ul>
+                <p style="text-align: center; font-weight: bold">Coordinators<br>
+
+                Varun Kumar : +91-7206479844, Abhishek Goswami : +91-9991016038</p>
+             </div>
+             </div>
+              <script type="text/javascript">
+              $(document).ready(function () {
  
     // Open in new window
-    //$(".box1").click(function () {
-      //  window.open($(this).find("a:first").attr("href"));
-        //return false;
-   // });
-              </script> -->
-       <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-  <script type="text/javascript">
-    $(function(){
-      // See if this is a touch device
-      if ('ontouchstart' in window)
-      {
-        // Set the correct body class
-        $('div').removeClass('no-touch').addClass('touch');
-         
-        // Add the touch toggle to show text
-        $('div.boxInner img').click(function(){
-          $(this).closest('.boxInner').toggleClass('touchFocus');
-        });
-      }
+    $(".box1").click(function () {
+        window.open($(this).find("a:first").attr("href"));
+        return false;
     });
-  </script> -->
-  
-    <!--<script type="text/javascript">
-        var myVar;
-
-    function myFunction() {
-        myVar = setTimeout(showPage, 3000);
-    }
-
-    function showPage() {
-        document.getElementById("ball").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-    }
-    </script>-->
-    </body> 
-    
-
-    <script src="js/main.js"></script>
-
+              </script>
+</body> 
+<script src="js/main.js"></script>
 </html>

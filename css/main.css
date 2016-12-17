@@ -27,6 +27,66 @@ body h1 {
 body a {
 	color: black;
 }
+p{
+	left: 15px; font-size:20px; font-family: Comic Sans MS; text-align: left;
+}
+
+/*#table{
+	margin-top: 100px;
+	margin-left: 80px;
+}*/
+.wrap {
+      overflow: hidden;
+      margin-top: 150px;
+      margin-left: 120px;
+    }
+    .box {
+      float: left;
+      position: relative;
+      width: 21%;
+      padding-bottom: 20%;
+    }
+    .boxInner {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      top: 10px;
+      bottom: 10px;
+      overflow: hidden;
+    }
+    .boxInner img {
+      width: 100%;
+    }
+    .boxInner .titleBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-bottom: -50px;
+      background: #000;
+      background: rgba(0, 0, 0, 0.5);
+      color: #FFF;
+      padding: 10px;
+      text-align: center;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+    div.no-touch .boxInner:hover .titleBox, div.touch .boxInner.touchFocus .titleBox {
+      margin-bottom: 0;
+    }
+    @media only screen and (max-width : 1290px) and (min-width : 1051px) {
+       Medium desktop: 4 tiles 
+      .box {
+        width: 25%;
+        padding-bottom: 25%;
+      }
+    }
+/*#padding{
+	padding-top: 190px;
+	padding-left: 80px;
+}*/
 #slides {
 	position: absolute;
 	top: 0;
@@ -44,12 +104,13 @@ body a {
 	background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 100%;
-}
-#loader {
 
 }
+#loader {
+    background: url('../images/loader.jpg');
+}
 #landing {
-	background: url('../images/graphics.jpg');
+	background: url('../images/4.jpg');
 }
 #web {
 	background: url('../images/web.jpg');
@@ -101,6 +162,62 @@ body a {
 	-webkit-transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 	transition-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 }
+#loader-content{
+	top: 0;
+	margin-top: 8cm;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: serif;
+	color: red;
+}
+#loader-content > div{
+	top: 0;
+	margin-top: 90px;
+    margin-left: 30px;
+	display: inline-block;
+  	height: 50px;
+  	width: 50px;
+  	background-color: white;
+  	border-radius: 50%;
+  	box-shadow:inset 6px -10px 50px -20px #000;
+  	animation: loading 1s infinite;
+}
+/*.loading {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 50px;
+  font-family: sans-serif;
+   display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  box-shadow:inset 6px -10px 50px -20px #000;
+  animation: loading 1s infinite;
+}
+.ball {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  background-color: #e74c3c;
+  border-radius: 50%;
+  box-shadow:inset 6px -10px 50px -20px #000;
+  animation: loading 1s infinite;
+}
+*/
+
+@keyframes loading {
+  0%, 100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: translateY(-30px);
+    animation-timing-function: ease-in;
+  }
+}
+ul.a {list-style-type: square;}
 #content {
 	position: absolute;
 	top: 0;
@@ -111,19 +228,61 @@ body a {
 }
 #content > div {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	left: 20px;
+	width: 98.5%;
+	height: 96%;
 	text-align: center;
 	font-size: 3em;
+	margin-top:25px;
+	overflow: auto;
+
 }
+div.img {
+	top: 35px;
+	left: 450px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    position: relative;
+  
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+    left:450px;
+ }
+
+div.desc {
+    padding: 10px;
+    text-align: center;
+}
+/*@-webkit-keyframes content {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes content { 
+  from{ bottom:-100px; opacity:0 } 
+  to{  bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+  }*/
 .kanvas-title {
 	text-align: center;
 	font-size: 2em;
 }
 .kanvas-title span {
 	color: black;
+	position: relative;
 	-webkit-transition-timing-function: cubic-bezier(1, 0.005, 0.33, 1);
 	transition-timing-function: cubic-bezier(1, 0.005, 0.33, 1);
 	-webkit-animation-name: floatAround-1;
@@ -131,7 +290,7 @@ body a {
 	-webkit-animation-timing-function: ease-out;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-fill-mode: forwards;
-	-webkit-animation-play-state: paused;
+	-webkit-animation-play-state:paused;
 	animation-name: floatAround-1;
 	animation-duration: 8s;
 	animation-timing-function: ease-out;
@@ -148,6 +307,7 @@ body a {
 	animation-name: floatAround-2;
 	animation-duration: 10s;
 }
+
 @-webkit-keyframes floatAround-1 {
 	0%, 100% {
 		-webkit-transform: translate3d(0, 0, 0);
@@ -199,6 +359,49 @@ body a {
 		animation-timing-function: ease-in;
 	}
 }
+/*#img{
+	text-align: "center";
+	margin-left: 20px;
+	margin-top: 80px;
+}
+.caption{
+	margin: 5px; text-align: center; font-style: italic; font-size: 25px; font-weight: bold; 
+	margin-left: 20px;
+	position: relative;
+}*/
+
+/*div.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: #eee;
+    color: #000;
+    padding: 20px;    
+}
+ 
+div.box:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: .9;
+}
+ 
+a.divLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    /* Makes sure the link doesn't get underlined 
+    z-index: 10;*/
+    /* raises anchor tag above everything else in div 
+    background-color: white;
+    /*workaround to make clickable in IE 
+    opacity: 0;
+    /*workaround to make clickable in IE 
+    filter: alpha(opacity=0);
+    /*workaround to make clickable in IE 
+}*/
 .content-close {
 	opacity: 0;
 	-webkit-transform: translate3d(0, 10px, 0) scale3d(0.8, 0.8, 1);

@@ -26,14 +26,20 @@
     	 
 	};
 
-	
 	var closeContents = function(slideNo) {
 		for (var i = 0; i <= 5; i++) {
 			contentArray[i].className = 'content-close';
 		}
 		contentArray[slideNo].className = 'content-open';
 	};
-
+	myFunction() {
+		loader.className = 'close2';
+				landing.className = 'close1';
+		web.className = 'open2';
+				graphics.className = 'close1';
+				photography.className = 'close2';
+				caption.className = 'close1';
+	}
 	var adjustSlides = function(slideNo) {
 		switch (slideNo) {
 			case 0:{
@@ -53,11 +59,8 @@
 				graphics.className = 'close1';
 				photography.className = 'close2';
 				caption.className = 'close1';
-
 				closeContents(slideNo);
-
 				break;
-
 			}
 			case 2: {
 				loader.className = 'close2';
