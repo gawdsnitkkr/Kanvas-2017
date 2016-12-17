@@ -1,6 +1,7 @@
 (function(w, d) {
 	var loader, landing, web, graphics, photography, caption, currentSlide;
 	var landingContent, webContent, graphicsContent, photographyContent, captionContent;
+	var kanvasLetters, boxes;
 	var contentArray = [];
 	var init = function() {
 		loader = d.getElementById('loader');
@@ -20,6 +21,14 @@
     	contentArray[3] = graphicsContent;
     	contentArray[4] = photographyContent;
     	contentArray[5] = captionContent;
+    	kanvasLetters = d.querySelectorAll('.kanvas-title span');
+    	//setting left position for kanvas span letters
+    	var left = 100 - 50 - 25
+    	for (var i = 0; i < kanvasLetters.length; i++) {
+    		kanvasLetters[i].style.left = left + '%';
+    		left += 5;
+    	}
+    	boxes = d.getElementsByClassName('box');
 	};
 	var closeContents = function(slideNo) {
 		for (var i = 1; i <= 5; i++) {
@@ -78,10 +87,12 @@
 	};
     d.addEventListener('DOMContentLoaded', function() {
     	init();
-    	//photography.style.display = 'none';
-		//caption.style.display = 'none';
+    	for (var i = 0; i < boxes.length; i++) {console.log(boxes[i]);
+    		boxes[i].addEventListener('click', function() {
+    			console.log('clicked');
+    		}, false);
+    	}
 		adjustSlides(currentSlide);
-		loader.style.display = 'none';
 		d.addEventListener('keydown', function(e) {
 			var keyCode = e.which;
 			//up arrow key
@@ -99,6 +110,10 @@
 				}
 				e.preventDefault();
 			}
+		});
+
+		w.addEventListener('load', function() {
+			loader.style.display = 'none';
 		});
     });
 })(window, document);
