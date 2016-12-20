@@ -87,10 +87,13 @@
 	};
     d.addEventListener('DOMContentLoaded', function() {
     	init();
-    	for (var i = 0; i < boxes.length; i++) {console.log(boxes[i]);
-    		boxes[i].addEventListener('click', function() {
-    			console.log('clicked');
-    		}, false);
+    	var boxes = document.getElementsByClassName('box');
+    	for (var i = 0; i < boxes.length; i++) {
+    		console.log(boxes[i]);
+    		boxes[i].addEventListener('click', function(e) {
+    			console.log(this.className);
+    			alert('clicked');
+    		});
     	}
 		adjustSlides(currentSlide);
 		d.addEventListener('keydown', function(e) {
