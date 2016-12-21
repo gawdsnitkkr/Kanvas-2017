@@ -50,13 +50,20 @@ body a {
     z-index: 5;
 }
 #landing {
-	background: url('../images/photography.jpg');
+	/*background: url('../images/photography.jpg');*/
+	background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: -webkit-radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: -moz-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: -ms-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: -o-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
 }
 #web {
-	background: url('../images/web.jpg');
+	/*background: url('../images/web.jpg');*/
+	background: #102b42;
 }
 #graphics {
-	background: url('../images/graphics.jpg');
+	/*background: url('../images/graphics.jpg');*/
+	background: #102231;
 }
 #photography {
 	background: url('../images/photography.jpg');
@@ -119,8 +126,8 @@ body a {
 	font-size: 3em;
 }
 .box {
-	height: 100px;
-	width: 100px;
+	height: 200px;
+	width: 200px;
 	background: green;
 	margin: 10px;
 	display: inline-block;
@@ -140,7 +147,7 @@ body a {
 	left: 0;
 	width: 100%;
 	height: 500px;
-	font-size: 2em;
+	font-size: .4em;
 	text-align: center;
 }
 .kanvas-title span {

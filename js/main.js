@@ -89,10 +89,9 @@
     	init();
     	var boxes = document.getElementsByClassName('box');
     	for (var i = 0; i < boxes.length; i++) {
-    		console.log(boxes[i]);
     		boxes[i].addEventListener('click', function(e) {
-    			console.log(this.className);
-    			alert('clicked');
+    			currentSlide = parseInt(this.getAttribute('data-index'));
+    			adjustSlides(currentSlide);
     		});
     	}
 		adjustSlides(currentSlide);
