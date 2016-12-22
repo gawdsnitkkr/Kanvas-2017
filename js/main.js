@@ -87,7 +87,7 @@
 	};
     d.addEventListener('DOMContentLoaded', function() {
     	init();
-    	var boxes = document.getElementsByClassName('box');
+    	var boxes = d.querySelectorAll('.kanvas-link a');
     	for (var i = 0; i < boxes.length; i++) {
     		boxes[i].addEventListener('click', function(e) {
     			currentSlide = parseInt(this.getAttribute('data-index'));

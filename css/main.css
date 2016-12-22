@@ -12,20 +12,20 @@ body {
 	margin: 0;
 	font-size: 1em;
 	font-family: abel;
-	color: black;
+	color: white;
 	line-height: 1.48em;
 	letter-spacing: 1px;
 	background: #22272b;
 	overflow: hidden;
 }
 body h1 {
-	color:  #333;
+	color:  white;
 	text-align: center;
 	font-family: Helvetica;
 	font-size: 2em;
 }
 body a {
-	color: black;
+	color: white;
 }
 #slides {
 	position: absolute;
@@ -41,35 +41,28 @@ body a {
 	height: 100%;
 	left: 0;
 	top: 0;
-	background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50% 100%;
+	background-repeat: repeat;
+    /*background-size: cover;
+    background-position: 50% 100%;*/
 }
 #loader {
     background: black;
     z-index: 5;
 }
 #landing {
-	/*background: url('../images/photography.jpg');*/
-	background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-	background: -webkit-radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-	background: -moz-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-	background: -ms-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-	background: -o-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: url('../images/bg3.jpg');
 }
 #web {
-	/*background: url('../images/web.jpg');*/
-	background: #102b42;
+	background: url('../images/bg4.jpg');
 }
 #graphics {
-	/*background: url('../images/graphics.jpg');*/
-	background: #102231;
+	background: url('../images/bg3.jpg');
 }
 #photography {
-	background: url('../images/photography.jpg');
+	background: url('../images/bg4.jpg');
 }
 #caption {
-	background: url('../images/caption.jpg');
+	background: url('../images/bg3.jpg');
 }
 .open1 {
 	opacity: 1;
@@ -141,19 +134,80 @@ body a {
 	height: 100px;
 	font-size: 2em;
 }
-#kanvas-link {
+.kanvas-link {
+	width: 56%;
+    height: 80%;
+    position: absolute;
+    left: 22%;
+    top: 20%;
+    font-size: .4em;
+}
+.effectBox {
 	position: absolute;
-	top: 200px;
-	left: 0;
-	width: 100%;
-	height: 500px;
-	font-size: .4em;
+	width: 44%;
+	height: 38%;
+	background: #006064;
+	-o-box-shadow: 1px 1px 3px;
+	-moz-box-shadow: 1px 1px 3px;
+	-ms-box-shadow: 1px 1px 3px;
+	-webkit-box-shadow: 1px 1px 3px;
+	box-shadow: 1px 1px 3px;
+	color: white;
+	padding: 0;
 	text-align: center;
+	overflow: hidden;
+}
+#effectBox1 {
+    top: 5%;
+    left: 2.5%;
+}
+#effectBox2 {
+	top: 5%;
+	left: 54%;
+}
+#effectBox3 {
+	top: 51%;
+	left: 3%;
+}
+#effectBox4 {
+	top: 51%;
+	left: 54%;
+}
+.effectBox a {
+	color: white;
+	text-decoration: none;
+}
+.effectBoxContent {
+	width: 92%;
+	height: 88%;
+	margin: 4%;
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	-moz-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	-o-transform: scale(1.15);
+	transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+}
+.effectBoxContent:hover {
+	transform: scale(1);
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	-o-transform: scale(1);
+}
+.effectBoxContent img {
+	width: 20%;
 }
 .kanvas-title span {
 	position: absolute;
 	top: 0px;
-	color: black;
+	color: white;
 	-webkit-transition-timing-function: cubic-bezier(1, 0.005, 0.33, 1);
 	transition-timing-function: cubic-bezier(1, 0.005, 0.33, 1);
 	-webkit-animation-name: floatAround-1;
